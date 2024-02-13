@@ -11,8 +11,6 @@ export class AppService {
   }
 
   verifyEmail(payload: VerifyEmailInterface) {
-    console.log(payload);
-
     const { email, verifyEmailToken } = payload;
 
     this.mailjetService.sendVerificationEmail(email, verifyEmailToken);
